@@ -1,0 +1,70 @@
+\hypertarget{img__listen__hal_8cpp}{}\section{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/src/img\+\_\+listen/hal/img\+\_\+listen\+\_\+hal.cpp File Reference}
+\label{img__listen__hal_8cpp}\index{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/src/img\+\_\+listen/hal/img\+\_\+listen\+\_\+hal.\+cpp@{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/src/img\+\_\+listen/hal/img\+\_\+listen\+\_\+hal.\+cpp}}
+{\ttfamily \#include \char`\"{}img\+\_\+listen/hal/img\+\_\+listen\+\_\+hal.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/image\+\_\+encodings.\+h$>$}\newline
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\newline
+Include dependency graph for img\+\_\+listen\+\_\+hal.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{img__listen__hal_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{img__listen__hal_8cpp_aa9eb0687a4faeb021a43aa8b7f2ca180}{hal\+\_\+init} (int argc, char $\ast$$\ast$argv, char $\ast$publisher, char $\ast$mono\+\_\+transport)
+\item 
+void \hyperlink{img__listen__hal_8cpp_a0d7dfd9133ce1e6b48bfdc8249db33d1}{image\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)
+\item 
+int \hyperlink{img__listen__hal_8cpp_a320d4712f522fc5d60f9469e8b173210}{hal\+\_\+ok} (void)
+\item 
+void \hyperlink{img__listen__hal_8cpp_a787804fe677c8b055d08421e48bd8d33}{listen\+\_\+state} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{img__listen__hal_8cpp_aa9eb0687a4faeb021a43aa8b7f2ca180}\label{img__listen__hal_8cpp_aa9eb0687a4faeb021a43aa8b7f2ca180}} 
+\index{img\+\_\+listen\+\_\+hal.\+cpp@{img\+\_\+listen\+\_\+hal.\+cpp}!hal\+\_\+init@{hal\+\_\+init}}
+\index{hal\+\_\+init@{hal\+\_\+init}!img\+\_\+listen\+\_\+hal.\+cpp@{img\+\_\+listen\+\_\+hal.\+cpp}}
+\subsubsection{\texorpdfstring{hal\+\_\+init()}{hal\_init()}}
+{\footnotesize\ttfamily void hal\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{char $\ast$}]{publisher,  }\item[{char $\ast$}]{mono\+\_\+transport }\end{DoxyParamCaption})}
+
+Initialize necessary variables and R\+OS environment. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments referred to ros\+::init, in case they exist. \\
+\hline
+{\em argv} & Value of arguments referred to ros\+::init, in case they exist. \\
+\hline
+{\em publisher} & Name of the publisher to listen to. \\
+\hline
+{\em mono\+\_\+transport} & Name to initialize the image transport. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{img__listen__hal_8cpp_a320d4712f522fc5d60f9469e8b173210}\label{img__listen__hal_8cpp_a320d4712f522fc5d60f9469e8b173210}} 
+\index{img\+\_\+listen\+\_\+hal.\+cpp@{img\+\_\+listen\+\_\+hal.\+cpp}!hal\+\_\+ok@{hal\+\_\+ok}}
+\index{hal\+\_\+ok@{hal\+\_\+ok}!img\+\_\+listen\+\_\+hal.\+cpp@{img\+\_\+listen\+\_\+hal.\+cpp}}
+\subsubsection{\texorpdfstring{hal\+\_\+ok()}{hal\_ok()}}
+{\footnotesize\ttfamily int hal\+\_\+ok (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function that checks for the correct running of the system. \mbox{\Hypertarget{img__listen__hal_8cpp_a0d7dfd9133ce1e6b48bfdc8249db33d1}\label{img__listen__hal_8cpp_a0d7dfd9133ce1e6b48bfdc8249db33d1}} 
+\index{img\+\_\+listen\+\_\+hal.\+cpp@{img\+\_\+listen\+\_\+hal.\+cpp}!image\+Callback@{image\+Callback}}
+\index{image\+Callback@{image\+Callback}!img\+\_\+listen\+\_\+hal.\+cpp@{img\+\_\+listen\+\_\+hal.\+cpp}}
+\subsubsection{\texorpdfstring{image\+Callback()}{imageCallback()}}
+{\footnotesize\ttfamily void image\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+Callback function used when an image is received. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Image received on the node. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{img__listen__hal_8cpp_a787804fe677c8b055d08421e48bd8d33}\label{img__listen__hal_8cpp_a787804fe677c8b055d08421e48bd8d33}} 
+\index{img\+\_\+listen\+\_\+hal.\+cpp@{img\+\_\+listen\+\_\+hal.\+cpp}!listen\+\_\+state@{listen\+\_\+state}}
+\index{listen\+\_\+state@{listen\+\_\+state}!img\+\_\+listen\+\_\+hal.\+cpp@{img\+\_\+listen\+\_\+hal.\+cpp}}
+\subsubsection{\texorpdfstring{listen\+\_\+state()}{listen\_state()}}
+{\footnotesize\ttfamily void listen\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function that enables the node but leaves it at an idle state (necessary). 

@@ -1,0 +1,75 @@
+\hypertarget{cam__stream__hal_8cpp}{}\section{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/src/cam\+\_\+stream/hal/cam\+\_\+stream\+\_\+hal.cpp File Reference}
+\label{cam__stream__hal_8cpp}\index{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/src/cam\+\_\+stream/hal/cam\+\_\+stream\+\_\+hal.\+cpp@{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/src/cam\+\_\+stream/hal/cam\+\_\+stream\+\_\+hal.\+cpp}}
+{\ttfamily \#include \char`\"{}cam\+\_\+stream/hal/cam\+\_\+stream\+\_\+hal.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cv\+\_\+bridge/cv\+\_\+bridge.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sensor\+\_\+msgs/\+Image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sensor\+\_\+msgs/image\+\_\+encodings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image\+\_\+transport/image\+\_\+transport.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/highgui.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/core.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/imgproc.\+hpp\char`\"{}}\newline
+Include dependency graph for cam\+\_\+stream\+\_\+hal.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cam__stream__hal_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cam__stream__hal_8cpp_ab3e92c6de76c27d00095b01f9445576d}\label{cam__stream__hal_8cpp_ab3e92c6de76c27d00095b01f9445576d}} 
+\#define {\bfseries R\+O\+S\+\_\+\+L\+O\+O\+P\+\_\+\+R\+A\+TE}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cam__stream__hal_8cpp_a1e11c2994e4c097b343c3c92bb3a0e76}{hal\+\_\+init} (int argc, char $\ast$$\ast$argv, std\+::string node\+\_\+name, int video\+\_\+source)
+\item 
+int \hyperlink{cam__stream__hal_8cpp_a320d4712f522fc5d60f9469e8b173210}{hal\+\_\+ok} (void)
+\item 
+void \hyperlink{cam__stream__hal_8cpp_a8c47344dc199b3ce95ae4342b6ba91bf}{publish\+\_\+img} (void)
+\item 
+void \hyperlink{cam__stream__hal_8cpp_adbab9ad5f150267e43a88b8c6ae35b88}{finish\+\_\+hal} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cam__stream__hal_8cpp_adbab9ad5f150267e43a88b8c6ae35b88}\label{cam__stream__hal_8cpp_adbab9ad5f150267e43a88b8c6ae35b88}} 
+\index{cam\+\_\+stream\+\_\+hal.\+cpp@{cam\+\_\+stream\+\_\+hal.\+cpp}!finish\+\_\+hal@{finish\+\_\+hal}}
+\index{finish\+\_\+hal@{finish\+\_\+hal}!cam\+\_\+stream\+\_\+hal.\+cpp@{cam\+\_\+stream\+\_\+hal.\+cpp}}
+\subsubsection{\texorpdfstring{finish\+\_\+hal()}{finish\_hal()}}
+{\footnotesize\ttfamily void finish\+\_\+hal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Release resources. \mbox{\Hypertarget{cam__stream__hal_8cpp_a1e11c2994e4c097b343c3c92bb3a0e76}\label{cam__stream__hal_8cpp_a1e11c2994e4c097b343c3c92bb3a0e76}} 
+\index{cam\+\_\+stream\+\_\+hal.\+cpp@{cam\+\_\+stream\+\_\+hal.\+cpp}!hal\+\_\+init@{hal\+\_\+init}}
+\index{hal\+\_\+init@{hal\+\_\+init}!cam\+\_\+stream\+\_\+hal.\+cpp@{cam\+\_\+stream\+\_\+hal.\+cpp}}
+\subsubsection{\texorpdfstring{hal\+\_\+init()}{hal\_init()}}
+{\footnotesize\ttfamily void hal\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{std\+::string}]{node\+\_\+name,  }\item[{int}]{video\+\_\+source }\end{DoxyParamCaption})}
+
+Initialize necessary variables and R\+OS environment. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments referred to ros\+::init, in case they exist. \\
+\hline
+{\em argv} & Value of arguments referred to ros\+::init, in case they exist. \\
+\hline
+{\em node\+\_\+name} & Name of the publisher. \\
+\hline
+{\em video\+\_\+source} & Identifier of the camera to use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cam__stream__hal_8cpp_a320d4712f522fc5d60f9469e8b173210}\label{cam__stream__hal_8cpp_a320d4712f522fc5d60f9469e8b173210}} 
+\index{cam\+\_\+stream\+\_\+hal.\+cpp@{cam\+\_\+stream\+\_\+hal.\+cpp}!hal\+\_\+ok@{hal\+\_\+ok}}
+\index{hal\+\_\+ok@{hal\+\_\+ok}!cam\+\_\+stream\+\_\+hal.\+cpp@{cam\+\_\+stream\+\_\+hal.\+cpp}}
+\subsubsection{\texorpdfstring{hal\+\_\+ok()}{hal\_ok()}}
+{\footnotesize\ttfamily int hal\+\_\+ok (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function that checks for the correct running of the system. \mbox{\Hypertarget{cam__stream__hal_8cpp_a8c47344dc199b3ce95ae4342b6ba91bf}\label{cam__stream__hal_8cpp_a8c47344dc199b3ce95ae4342b6ba91bf}} 
+\index{cam\+\_\+stream\+\_\+hal.\+cpp@{cam\+\_\+stream\+\_\+hal.\+cpp}!publish\+\_\+img@{publish\+\_\+img}}
+\index{publish\+\_\+img@{publish\+\_\+img}!cam\+\_\+stream\+\_\+hal.\+cpp@{cam\+\_\+stream\+\_\+hal.\+cpp}}
+\subsubsection{\texorpdfstring{publish\+\_\+img()}{publish\_img()}}
+{\footnotesize\ttfamily void publish\+\_\+img (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Read image from source and publish it. 

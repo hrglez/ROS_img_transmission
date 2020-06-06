@@ -1,0 +1,67 @@
+\hypertarget{cam__stream__api_8hpp}{}\section{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/include/cam\+\_\+stream/api/cam\+\_\+stream\+\_\+api.hpp File Reference}
+\label{cam__stream__api_8hpp}\index{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/include/cam\+\_\+stream/api/cam\+\_\+stream\+\_\+api.\+hpp@{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/include/cam\+\_\+stream/api/cam\+\_\+stream\+\_\+api.\+hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for cam\+\_\+stream\+\_\+api.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{cam__stream__api_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cam__stream__api_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cam__stream__api_8hpp_a071b3460290577ea5f2dde4bbceb43a3}{system\+\_\+init} (int argc, char $\ast$$\ast$argv, std\+::string node\+\_\+name, int video\+\_\+source)
+\item 
+int \hyperlink{cam__stream__api_8hpp_a77353b4935e897316414f01ccd30b117}{system\+\_\+ok} (void)
+\item 
+void \hyperlink{cam__stream__api_8hpp_aa1f1f7d9c7b32ebc5ee26f4d9748d99f}{stream} (void)
+\item 
+void \hyperlink{cam__stream__api_8hpp_ac6d72bbe9a798feae197f4c8ce164b08}{finish\+\_\+system} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cam__stream__api_8hpp_ac6d72bbe9a798feae197f4c8ce164b08}\label{cam__stream__api_8hpp_ac6d72bbe9a798feae197f4c8ce164b08}} 
+\index{cam\+\_\+stream\+\_\+api.\+hpp@{cam\+\_\+stream\+\_\+api.\+hpp}!finish\+\_\+system@{finish\+\_\+system}}
+\index{finish\+\_\+system@{finish\+\_\+system}!cam\+\_\+stream\+\_\+api.\+hpp@{cam\+\_\+stream\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{finish\+\_\+system()}{finish\_system()}}
+{\footnotesize\ttfamily void finish\+\_\+system (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function in charge of releasing the system resources. \mbox{\Hypertarget{cam__stream__api_8hpp_aa1f1f7d9c7b32ebc5ee26f4d9748d99f}\label{cam__stream__api_8hpp_aa1f1f7d9c7b32ebc5ee26f4d9748d99f}} 
+\index{cam\+\_\+stream\+\_\+api.\+hpp@{cam\+\_\+stream\+\_\+api.\+hpp}!stream@{stream}}
+\index{stream@{stream}!cam\+\_\+stream\+\_\+api.\+hpp@{cam\+\_\+stream\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{stream()}{stream()}}
+{\footnotesize\ttfamily void stream (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function in charge of streaming the image. \mbox{\Hypertarget{cam__stream__api_8hpp_a071b3460290577ea5f2dde4bbceb43a3}\label{cam__stream__api_8hpp_a071b3460290577ea5f2dde4bbceb43a3}} 
+\index{cam\+\_\+stream\+\_\+api.\+hpp@{cam\+\_\+stream\+\_\+api.\+hpp}!system\+\_\+init@{system\+\_\+init}}
+\index{system\+\_\+init@{system\+\_\+init}!cam\+\_\+stream\+\_\+api.\+hpp@{cam\+\_\+stream\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{system\+\_\+init()}{system\_init()}}
+{\footnotesize\ttfamily void system\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{std\+::string}]{node\+\_\+name,  }\item[{int}]{video\+\_\+source }\end{DoxyParamCaption})}
+
+Initialize necessary variables and R\+OS environment. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments, in case they exist. \\
+\hline
+{\em argv} & Value of arguments, in case they exist. \\
+\hline
+{\em node\+\_\+name} & Name of the publisher. \\
+\hline
+{\em video\+\_\+source} & Identifier of the camera to use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cam__stream__api_8hpp_a77353b4935e897316414f01ccd30b117}\label{cam__stream__api_8hpp_a77353b4935e897316414f01ccd30b117}} 
+\index{cam\+\_\+stream\+\_\+api.\+hpp@{cam\+\_\+stream\+\_\+api.\+hpp}!system\+\_\+ok@{system\+\_\+ok}}
+\index{system\+\_\+ok@{system\+\_\+ok}!cam\+\_\+stream\+\_\+api.\+hpp@{cam\+\_\+stream\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{system\+\_\+ok()}{system\_ok()}}
+{\footnotesize\ttfamily int system\+\_\+ok (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function that checks for the correct running of the system. 

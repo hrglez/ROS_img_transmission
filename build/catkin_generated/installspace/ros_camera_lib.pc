@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: ros_camera_lib
+Description: Description of ros_camera_lib
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge sensor_msgs image_transport roscpp roslib visualization_msgs

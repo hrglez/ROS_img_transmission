@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/hrg/Documents/ROS/ros_ws/src/ros_camera_lib/build/devel/setup.sh

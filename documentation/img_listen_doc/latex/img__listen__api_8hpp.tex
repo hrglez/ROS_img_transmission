@@ -1,0 +1,51 @@
+\hypertarget{img__listen__api_8hpp}{}\section{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/include/img\+\_\+listen/api/img\+\_\+listen\+\_\+api.hpp File Reference}
+\label{img__listen__api_8hpp}\index{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/include/img\+\_\+listen/api/img\+\_\+listen\+\_\+api.\+hpp@{/home/hrg/\+Documents/\+R\+O\+S/ros\+\_\+ws/src/ros\+\_\+camera\+\_\+lib/include/img\+\_\+listen/api/img\+\_\+listen\+\_\+api.\+hpp}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{img__listen__api_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{img__listen__api_8hpp_abc28f5ca0b3b4e76aab86f15a1c8e466}{system\+\_\+init} (int argc, char $\ast$$\ast$argv, char $\ast$publisher, char $\ast$mono\+\_\+transport)
+\item 
+int \hyperlink{img__listen__api_8hpp_a77353b4935e897316414f01ccd30b117}{system\+\_\+ok} (void)
+\item 
+void \hyperlink{img__listen__api_8hpp_a4cb5c52a032d8bcdf37d038dfcdfbc4d}{idle\+\_\+state} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{img__listen__api_8hpp_a4cb5c52a032d8bcdf37d038dfcdfbc4d}\label{img__listen__api_8hpp_a4cb5c52a032d8bcdf37d038dfcdfbc4d}} 
+\index{img\+\_\+listen\+\_\+api.\+hpp@{img\+\_\+listen\+\_\+api.\+hpp}!idle\+\_\+state@{idle\+\_\+state}}
+\index{idle\+\_\+state@{idle\+\_\+state}!img\+\_\+listen\+\_\+api.\+hpp@{img\+\_\+listen\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{idle\+\_\+state()}{idle\_state()}}
+{\footnotesize\ttfamily void idle\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+A\+PI function that enables the node but leaves it at an idle state (necessary). \mbox{\Hypertarget{img__listen__api_8hpp_abc28f5ca0b3b4e76aab86f15a1c8e466}\label{img__listen__api_8hpp_abc28f5ca0b3b4e76aab86f15a1c8e466}} 
+\index{img\+\_\+listen\+\_\+api.\+hpp@{img\+\_\+listen\+\_\+api.\+hpp}!system\+\_\+init@{system\+\_\+init}}
+\index{system\+\_\+init@{system\+\_\+init}!img\+\_\+listen\+\_\+api.\+hpp@{img\+\_\+listen\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{system\+\_\+init()}{system\_init()}}
+{\footnotesize\ttfamily void system\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{char $\ast$}]{publisher,  }\item[{char $\ast$}]{mono\+\_\+transport }\end{DoxyParamCaption})}
+
+Initialize necessary variables and R\+OS environment. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments, in case they exist. \\
+\hline
+{\em argv} & Value of arguments, in case they exist. \\
+\hline
+{\em publisher} & Name of the publisher to listen to. \\
+\hline
+{\em mono\+\_\+transport} & Name to initialize the image transport. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{img__listen__api_8hpp_a77353b4935e897316414f01ccd30b117}\label{img__listen__api_8hpp_a77353b4935e897316414f01ccd30b117}} 
+\index{img\+\_\+listen\+\_\+api.\+hpp@{img\+\_\+listen\+\_\+api.\+hpp}!system\+\_\+ok@{system\+\_\+ok}}
+\index{system\+\_\+ok@{system\+\_\+ok}!img\+\_\+listen\+\_\+api.\+hpp@{img\+\_\+listen\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{system\+\_\+ok()}{system\_ok()}}
+{\footnotesize\ttfamily int system\+\_\+ok (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+A\+PI function that checks for the correct running of the system. 

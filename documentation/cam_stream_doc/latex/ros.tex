@@ -1,0 +1,96 @@
+R\+OS Melodic installation for Ubuntu 18\+:~\newline
+\href{http://wiki.ros.org/melodic/Installation/Ubuntu}{\tt http\+://wiki.\+ros.\+org/melodic/\+Installation/\+Ubuntu} \begin{DoxyVerb}                          CREATE ENVIRONMENT
+\end{DoxyVerb}
+
+
+It is important to first create a folder to put the R\+OS environment in it.
+
+You could add the default environment variables with\+:~\newline
+{\ttfamily source /opt/ros/kinetic/setup.bash}
+
+Depending on version you need, instead of the above\+:~\newline
+{\ttfamily source /opt/ros/melodic/setup.bash}
+
+{\bfseries Y\+OU DO N\+OT A\+L\+W\+A\+YS H\+A\+VE TO S\+O\+U\+R\+CE T\+HE D\+E\+F\+A\+U\+LT V\+A\+R\+I\+A\+B\+L\+ES, B\+UT IT IS C\+O\+N\+V\+E\+N\+I\+E\+NT}.
+
+Create the workspace creating the two main directories (must place the terminal in desired folder first)\+:~\newline
+{\ttfamily mkdir -\/p $<$environment\+\_\+folder\+\_\+name$>$/src}
+
+Initialize the environment with\+:~\newline
+{\ttfamily cd $<$environment\+\_\+folder\+\_\+name$>$~\newline
+catkin\+\_\+make}
+
+Overlay catkin workspace with\+:~\newline
+{\ttfamily source devel/setup.\+bash}
+
+Finally, you can check your workspace with\+:~\newline
+{\ttfamily echo \$\+R\+O\+S\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+P\+A\+TH} \begin{DoxyVerb}                            USEFUL COMMANDS
+\end{DoxyVerb}
+
+
+Start a master in a separate terminalwith\+:~\newline
+{\ttfamily roscore}
+
+To be able to run a node from a created package you must add it as source.~\newline
+To do this you must go to the environment folder and run\+:~\newline
+{\ttfamily catkin\+\_\+make}
+
+This will run all of your packages and add them to this environment.~\newline
+Now, add the environment with\+:~\newline
+{\ttfamily source devel/setup.\+bash}
+
+Once you did this, you can use rosrun to run your node.
+
+Run a node with\+:~\newline
+{\ttfamily rosrun $<$package\+\_\+name$>$ $<$node\+\_\+name$>$}
+
+Check active nodes with\+:~\newline
+{\ttfamily rosnode list}
+
+Retrieve information about a node with\+:~\newline
+{\ttfamily rosnode info $<$node\+\_\+name$>$}
+
+List active topics with\+:~\newline
+{\ttfamily rostopic list}
+
+Subscribe and print the contents of a topic with\+:~\newline
+{\ttfamily rostopic echo /topic}
+
+Show information about a topic with\+:~\newline
+{\ttfamily rostopic info /topic} \begin{DoxyVerb}                           CREATE A PACKAGE
+\end{DoxyVerb}
+
+
+Once you created the environment, locate a terminal in the src folder and run\+:~\newline
+{\ttfamily catkin\+\_\+create\+\_\+pkg $<$package\+\_\+name$>$ \{$<$dependencies$>$\}}
+
+{\bfseries N\+O\+TE\+:} {\itshape D\+E\+P\+E\+N\+D\+E\+N\+C\+I\+ES A\+RE O\+T\+H\+ER P\+A\+C\+K\+A\+G\+ES N\+E\+E\+D\+ED BY T\+HE F\+I\+R\+ST P\+A\+C\+K\+A\+GE.}
+
+Once you run the command you will have to modify the package.\+xml file.~\newline
+Important thing to modify are\+:~\newline
+\begin{DoxyItemize}
+\item Package name\+: Name of the package. Defined at creation. \item Version number\+: Version of the developed project. \item Authors\+: Project contributors. \item Dependencies on other packages\+: Very important. Some options appear commented. Check for necessary ones.\end{DoxyItemize}
+You will also have to modify the C\+Make\+Lists.\+txt, taking care of at least\+:~\newline
+\begin{DoxyItemize}
+\item {\ttfamily cmake\+\_\+minimum\+\_\+required(V\+E\+R\+S\+I\+ON 2.\+8.\+3)} \+: Version \item {\ttfamily project($<$package\+\_\+name$>$)} \+: Package name \item {\ttfamily add\+\_\+definitions(--std=c++11)} \+: C++11 by default \item {\ttfamily find\+\_\+package(catkin R\+E\+Q\+U\+I\+R\+ED} \+: Required packages \item {\ttfamily C\+O\+M\+P\+O\+N\+E\+N\+TS $<$package1$>$ $<$package2$>$ )} \item {\ttfamily catkin\+\_\+package (} \+: Starting from here, required files are included~\newline
+ {\ttfamily I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+RS $<$directory\+\_\+with\+\_\+include\+\_\+files$>$} \+: Directory with headers~\newline
+ {\ttfamily \# L\+I\+B\+R\+A\+R\+I\+ES} \+: Libraries in the project~\newline
+ {\ttfamily C\+A\+T\+K\+I\+N\+\_\+\+D\+E\+P\+E\+N\+DS $<$library\+\_\+\+A$>$ $<$library\+\_\+\+B$>$} \+: Required libraries~\newline
+ {\ttfamily \# D\+E\+P\+E\+N\+DS )} \+: Package dependent projects~\newline
+\item {\ttfamily include\+\_\+directories(include \$\{catkin\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+RS\})} \item {\ttfamily add\+\_\+executable(\$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+ME\}} \+: Declare a C++ executable name \item {\ttfamily src/\$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+ME\}\+\_\+node.\+cpp} \+: Declare all source files \item {\ttfamily src/comm\+\_\+interface.\+cpp )} \item {\ttfamily target\+\_\+link\+\_\+libraries(\$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+ME\}} \+: Specify the libraries to link the executable against \item {\ttfamily \$\{catkin\+\_\+\+L\+I\+B\+R\+A\+R\+I\+ES\})}\end{DoxyItemize}
+The main components of a C\+Make\+Lists.\+txt are\+:~\newline
+\begin{DoxyItemize}
+\item Required C\+Make Version~\newline
+ {\ttfamily cmake\+\_\+minimum\+\_\+required()} \item Package Name\+:~\newline
+ {\ttfamily project($<$package\+\_\+name$>$)} \item Find other C\+Make/\+Catkin packages needed for build\+:~\newline
+ {\ttfamily find package($<$dependencies$>$)} \item Message/\+Service/\+Action Generators\+:~\newline
+ {\ttfamily add message files()~\newline
+ add service files()~\newline
+ add action files()} \item Invoke message/service/action generation\+:~\newline
+ {\ttfamily generate messages()} \item Specify package build info export\+:~\newline
+ {\ttfamily catkin package()} \item Libraries/\+Executable to build\+:~\newline
+ {\ttfamily add library()~\newline
+ add executable()~\newline
+ target link libraries()} \item Tests to build\+:~\newline
+ {\ttfamily catkin add gtest()} \item Install rules~\newline
+ {\ttfamily install()} \end{DoxyItemize}
